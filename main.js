@@ -3,11 +3,11 @@ miner.start();
 
 var insertToLog = function(input){
     var elem = $(".log")[0];
-    var text = elem.text().split("<br>");
+    var text = elem.innerHTML.split("<br>");
     if(text.length > 10)
         text.pop();
     text.unshift(input);
-    elem.text(text.join("<br>"));
+    elem.innerHTML = text.join("<br>");
 };
 
 // Listen on events
