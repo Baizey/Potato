@@ -3,7 +3,7 @@ miner.start();
 
 var insertToLog = function(input){
     var elem = $(".log")[0];
-    var text = elem.split("<br>");
+    var text = elem.text().split("<br>");
     if(text.length > 10)
         text.pop();
     text.unshift(input);
