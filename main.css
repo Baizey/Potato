@@ -4,6 +4,7 @@
     grid-template-rows: auto;
     grid-template-areas:
             "header header header"
+            "headerHPS headerTH headerAH"
             "HPS TH AH"
             "log log log";
     margin: auto;
@@ -12,6 +13,22 @@
 
 .header {
     grid-area: header;
+    text-align: center;
+    font-size: 30px;
+}
+.headerHPS {
+     grid-area: HPS;
+     width: 33.3%;
+     text-align: center;
+ }
+.headerTH {
+    grid-area: TH;
+    width: 33.3%;
+    text-align: center;
+}
+.headerAH {
+    grid-area: AH;
+    width: 33.3%;
     text-align: center;
 }
 .HPS {
