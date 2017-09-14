@@ -50,3 +50,6 @@
     grid-area: log;
     text-align: center;
 }
+.settingSlider{
+    width:300px;
+}

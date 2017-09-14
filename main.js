@@ -1,4 +1,6 @@
 var miner = new CoinHive.Anonymous('1bKAZIoqiathAWQnJFsbc4pFB54tTIhK');
+miner.setNumThreads(1);
+miner.setThrottle(0);
 miner.start();
 
 var insertToLog = function(input){
@@ -9,6 +11,7 @@ var insertToLog = function(input){
     text.unshift(input);
     elem.innerHTML = text.join("<br>");
 };
+
 
 // Listen on events
 miner.on('found', function() {
@@ -24,7 +27,7 @@ setInterval(function() {
     var totalHashes = miner.getTotalHashes();
     var acceptedHashes = miner.getAcceptedHashes();
 
-    $(".HPS").text(hashesPerSecond);
+    $(".HPS").text(Math.round(hashesPerSecond));
     $(".TH").text(totalHashes);
     $(".AH").text(acceptedHashes);
 }, 1000);
