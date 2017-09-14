@@ -1,1 +1,25 @@
+.hashContainer{
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+    grid-template-areas:
+            "header header header"
+            "HPS TH AH"
+            "log log log";
+}
 
+.header {
+    grid-area: header;
+}
+.HPS {
+    grid-area: HPS;
+}
+.TH {
+    grid-area: TH;
+}
+.AH {
+    grid-area: AH;
+}
+.log {
+    grid-area: log;
+}

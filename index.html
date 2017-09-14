@@ -1,8 +1,11 @@
 <html>
     <head>
+        <meta charset="utf-8">
         <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
         <script src="https://coin-hive.com/lib/captcha.min.js" async></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
         <script src="main.js"></script>
     </head>
     <body>
@@ -12,10 +15,10 @@
 
             // Listen on events
             miner.on('found', function() {
-                console.log("Found hash");
+                $(".log").append("Found hash");
             });
             miner.on('accepted', function() {
-                console.log("Accepted hash");
+                $(".log").append("Accepted hashes");
             });
 
             // Update stats once per second
@@ -24,25 +27,24 @@
                 var totalHashes = miner.getTotalHashes();
                 var acceptedHashes = miner.getAcceptedHashes();
 
-                console.log("Hash per sec: " + hashesPerSecond);
-                console.log("Total hashes: " + totalHashes);
-                console.log("Accepted hashes: " + acceptedHashes);
-
+                $(".HPS").text(hashesPerSecond);
+                $(".TH").text(totalHashes);
+                $(".AH").text(acceptedHashes);
             }, 1000);
         </script>
 
-        <p class="HPS"></p>
-        <p class="TH"></p>
-        <p class="AH"></p>
-
+        <section class="hashContainer">
+            <div class="HPS"></div>
+            <div class="TH"></div>
+            <div class="AH"></div>
+            <div class="log"></div>
+        </section>
+        <!--
         <form action="?" method="post">
-            <!-- other form fields -->
-
             <div class="coinhive-captcha" data-hashes="1024" data-key="1bKAZIoqiathAWQnJFsbc4pFB54tTIhK"></div>
-
-            <input type="submit" value="Submit"/>
+        <input type="submit" value="Submit"/>
         </form>
-
+        -->
     </body>
 
 </html>
