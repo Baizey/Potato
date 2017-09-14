@@ -12,13 +12,6 @@ var insertToLog = function(input){
     elem.innerHTML = text.join("<br>");
 };
 
-$("#throttle").change(function(val){
-    miner.setThrottle(val);
-});
-$("#threads").change(function(val){
-    miner.setThrottle(val);
-});
-
 // Listen on events
 miner.on('found', function() {
     insertToLog("Found hash");
