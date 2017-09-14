@@ -5,8 +5,7 @@
     grid-template-areas:
             "header header header"
             "headerSec headerMin headerHour"
-            "lastSec lastMin lastHour"
-            "log log log";
+            "lastSec lastMin lastHour";
     margin: auto;
     width: 300px;
 }
@@ -18,43 +17,38 @@
 }
 
 .headerSec {
-    grid-area: headerHPS;
+    grid-area: headerSec;
     width: 33.3%;
     text-align: center;
 }
 
 .headerMin {
-    grid-area: headerTH;
+    grid-area: headerMin;
     width: 33.3%;
     text-align: center;
 }
 
 .headerHour {
-    grid-area: headerAH;
+    grid-area: headerHour;
     width: 33.3%;
     text-align: center;
 }
 
 .HPS {
-    grid-area: HPS;
+    grid-area: lastSec;
     width: 33.3%;
     text-align: center;
 }
 
 .TH {
-    grid-area: TH;
+    grid-area: lastMin;
     width: 33.3%;
     text-align: center;
 }
 
 .AH {
-    grid-area: AH;
+    grid-area: lastHour;
     width: 33.3%;
-    text-align: center;
-}
-
-.log {
-    grid-area: log;
     text-align: center;
 }
 
