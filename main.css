@@ -4,8 +4,8 @@
     grid-template-rows: auto;
     grid-template-areas:
             "header header header"
-            "headerHPS headerTH headerAH"
-            "HPS TH AH"
+            "headerSec headerMin headerHour"
+            "lastSec lastMin lastHour"
             "log log log";
     margin: auto;
     width: 300px;

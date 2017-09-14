@@ -11,17 +11,72 @@ var insertToLog = function (input) {
 };
 
 // Listen on events
-miner.on('found', function () {
-    insertToLog("Found hash");
-});
-miner.on('accepted', function () {
-    insertToLog("Accepted hash");
-});
+// miner.on('found', function () { insertToLog("Found hash"); });
+// miner.on('accepted', function () { insertToLog("Accepted hash"); });
 
 // Update stats once per second
+
+
+var memory = [
+    {
+        id: "lastSec",
+        sum: 0,
+        counter: 0,
+        maxCount: 60,
+        count: function() {
+            this.counter++;
+            if(this.counter >= this.maxCount) {
+                this.counter = 0;
+                return true;
+            }
+            return false;
+        },
+        memory: []
+    },
+    {
+        id: "lastMin",
+        sum: 0,
+        counter: 0,
+        maxCount: 60,
+        count: function() {
+            this.counter++;
+            if(this.counter >= this.maxCount) {
+                this.counter = 0;
+                return true;
+            }
+            return false;
+        },
+        memory: []
+    },
+    {
+        id: "lastHour",
+        sum: 0,
+        counter: 0,
+        maxCount: 24,
+        count: function() {
+            this.counter++;
+            if(this.counter >= this.maxCount) {
+                this.counter = 0;
+                return true;
+            }
+            return false;
+        },
+        memory: []
+    }
+];
+
 setInterval(function () {
-    $(".HPS").text(Math.round(miner.getHashesPerSecond()));
-    $(".TH").text(miner.getTotalHashes());
-    $(".AH").text(miner.getAcceptedHashes());
+    var value = miner.getHashesPerSecond();
+
+    for(var mem in memory) {
+        mem.sum += value;
+        mem.memory.push(value);
+        if(mem.memory.length > mem.maxCount)
+            mem.sum -= mem.memory.shift();
+        if(!mem.count())
+            break;
+        value = mem.sum;
+        $("." + mem.id).innerHTML = value;
+    }
 
 }, 1000);
