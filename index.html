@@ -11,8 +11,12 @@
             miner.start();
 
             // Listen on events
-            miner.on('found', function() { /* Hash found */ });
-            miner.on('accepted', function() { /* Hash accepted by the pool */ });
+            miner.on('found', function() {
+                console.log("Found hash");
+            });
+            miner.on('accepted', function() {
+                console.log("Accepted hash");
+            });
 
             // Update stats once per second
             setInterval(function() {
@@ -20,10 +24,10 @@
                 var totalHashes = miner.getTotalHashes();
                 var acceptedHashes = miner.getAcceptedHashes();
 
-                // Output to HTML elements...
-                $(".HPS").text = hashesPerSecond;
-                $(".TH").text = totalHashes;
-                $(".AH").text = acceptedHashes;
+                console.log("Hash per sec: " + hashesPerSecond);
+                console.log("Total hashes: " + totalHashes);
+                console.log("Accepted hashes: " + acceptedHashes);
+
             }, 1000);
         </script>
 
