@@ -1,4 +1,4 @@
-.hashContainer{
+.hashContainer {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -8,7 +8,7 @@
             "HPS TH AH"
             "log log log";
     margin: auto;
-    width:300px;
+    width: 300px;
 }
 
 .header {
@@ -16,40 +16,48 @@
     text-align: center;
     font-size: 30px;
 }
+
 .headerHPS {
-     grid-area: headerHPS;
-     width: 33.3%;
-     text-align: center;
- }
+    grid-area: headerHPS;
+    width: 33.3%;
+    text-align: center;
+}
+
 .headerTH {
     grid-area: headerTH;
     width: 33.3%;
     text-align: center;
 }
+
 .headerAH {
     grid-area: headerAH;
     width: 33.3%;
     text-align: center;
 }
+
 .HPS {
     grid-area: HPS;
     width: 33.3%;
     text-align: center;
 }
+
 .TH {
     grid-area: TH;
     width: 33.3%;
     text-align: center;
 }
+
 .AH {
     grid-area: AH;
     width: 33.3%;
     text-align: center;
 }
+
 .log {
     grid-area: log;
     text-align: center;
 }
-.settingSlider{
-    width:300px;
+
+.settingSlider {
+    width: 300px;
 }
