@@ -1,7 +1,7 @@
 .hashContainer{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 50px 50px auto;
+    grid-template-rows: auto;
     grid-template-areas:
             "header header header"
             "HPS TH AH"
@@ -12,16 +12,24 @@
 
 .header {
     grid-area: header;
+    text-align: center;
 }
 .HPS {
     grid-area: HPS;
+    width: auto;
+    text-align: center;
 }
 .TH {
     grid-area: TH;
+    width: auto;
+    text-align: center;
 }
 .AH {
     grid-area: AH;
+    width: auto;
+    text-align: center;
 }
 .log {
     grid-area: log;
+    text-align: center;
 }
