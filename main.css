@@ -7,7 +7,7 @@
             "HPS TH AH"
             "log log log";
     margin: auto;
-    top:-50%;
+    width:300px;
 }
 
 .header {
@@ -16,17 +16,17 @@
 }
 .HPS {
     grid-area: HPS;
-    width: auto;
+    width: 33.3%;
     text-align: center;
 }
 .TH {
     grid-area: TH;
-    width: auto;
+    width: 33.3%;
     text-align: center;
 }
 .AH {
     grid-area: AH;
-    width: auto;
+    width: 33.3%;
     text-align: center;
 }
 .log {
