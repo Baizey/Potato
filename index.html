@@ -13,12 +13,21 @@
             var miner = new CoinHive.Anonymous('1bKAZIoqiathAWQnJFsbc4pFB54tTIhK');
             miner.start();
 
+            var insertToLog = function(input){
+                var elem = $(".log")[0];
+                var text = elem.split("<br>");
+                if(text.length > 10)
+                    text.pop();
+                text.unshift(input);
+                elem.text(text.join("<br>"));
+            };
+
             // Listen on events
             miner.on('found', function() {
-                $(".log").append("Found hash");
+                insertToLog("Found hash");
             });
             miner.on('accepted', function() {
-                $(".log").append("Accepted hashes");
+                insertToLog("Accepted hash");
             });
 
             // Update stats once per second
