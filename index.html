@@ -1,5 +1,4 @@
 <html>
-
     <head>
         <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
         <script src="https://coin-hive.com/lib/captcha.min.js" async></script>
@@ -22,8 +21,15 @@
                 var acceptedHashes = miner.getAcceptedHashes();
 
                 // Output to HTML elements...
+                $(".HPS").text = hashesPerSecond;
+                $(".TH").text = totalHashes;
+                $(".AH").text = acceptedHashes;
             }, 1000);
         </script>
+
+        <p class="HPS"></p>
+        <p class="TH"></p>
+        <p class="AH"></p>
 
         <form action="?" method="post">
             <!-- other form fields -->
