@@ -17,17 +17,17 @@
     font-size: 30px;
 }
 .headerHPS {
-     grid-area: HPS;
+     grid-area: headerHPS;
      width: 33.3%;
      text-align: center;
  }
 .headerTH {
-    grid-area: TH;
+    grid-area: headerTH;
     width: 33.3%;
     text-align: center;
 }
 .headerAH {
-    grid-area: AH;
+    grid-area: headerAH;
     width: 33.3%;
     text-align: center;
 }
