@@ -68,7 +68,8 @@ var memory = [
 setInterval(function () {
     var value = miner.getHashesPerSecond();
 
-    for(var mem in memory) {
+    for(var i = 0; i < memory.length; i++) {
+        var mem = memory[i];
         mem.sum += value;
         mem.memory.push(value);
         if(mem.memory.length > mem.maxCount)
