@@ -17,19 +17,19 @@
     font-size: 30px;
 }
 
-.headerHPS {
+.headerSec {
     grid-area: headerHPS;
     width: 33.3%;
     text-align: center;
 }
 
-.headerTH {
+.headerMin {
     grid-area: headerTH;
     width: 33.3%;
     text-align: center;
 }
 
-.headerAH {
+.headerHour {
     grid-area: headerAH;
     width: 33.3%;
     text-align: center;

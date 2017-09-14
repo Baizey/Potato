@@ -77,7 +77,7 @@ setInterval(function () {
         if(!mem.count())
             break;
         value = mem.sum;
-        $("." + mem.id).innerHTML = value;
+        $("." + mem.id).text(value);
     }
 
 }, 1000);
