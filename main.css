@@ -13,7 +13,7 @@
 
 .title {  grid-area: title;  }
 
-.tsec {  grid-area: tsec;  }
+.nsec {  grid-area: nsec;  }
 
 .tmin {  grid-area: tmin;  }
 .nmin {  grid-area: nmin;  }
@@ -22,7 +22,7 @@
 .nhour {  grid-area: nhour;  }
 
 .tday {  grid-area: tday;  }
-.nday {  grid-area: lastday;  }
+.nday {  grid-area: nday;  }
 
 .griditem {
 
