@@ -5,24 +5,24 @@
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
             "title title title"
-            "lastsec lastsec lastsec"
-            "headermin headerhour headerday"
-            "lasthour lastday lastday";
+            "nsec nsec nsec"
+            "tmin thour tday"
+            "nmin nhour nday";
     margin: auto;
 }
 
 .title {  grid-area: title;  }
 
-.headersec {  grid-area: headersec;  }
+.tsec {  grid-area: tsec;  }
 
-.headermin {  grid-area: headermin;  }
-.lastmin {  grid-area: lastmin;  }
+.tmin {  grid-area: tmin;  }
+.nmin {  grid-area: nmin;  }
 
-.headerhour {  grid-area: headerhour;  }
-.lasthour {  grid-area: lasthour;  }
+.thour {  grid-area: thour;  }
+.nhour {  grid-area: nhour;  }
 
-.headerday {  grid-area: headerday;  }
-.lastday {  grid-area: lastday;  }
+.tday {  grid-area: tday;  }
+.nday {  grid-area: lastday;  }
 
 .griditem {
     display: flex;
