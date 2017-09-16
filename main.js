@@ -46,12 +46,17 @@ var memory = [
     new Memory("nhour", 60, 1/60/60),
     new Memory("nday", 24, 1/60/60/24)
 ];
+var sum = 0;
 setInterval(function () {
     var value = miner.getHashesPerSecond();
+    sum += value;
     for (var i = 0; i < memory.length; i++) {
         var item = memory[i];
         value = item.add(value);
-        $(item.id()).text(item.getPerX() + " (" + item.getPerSec() + "/s)");
+        if(i === 0)
+            $(item.id()).text(sum + " (" + item.getPerSec() + "/s)");
+        else
+            $(item.id()).text(item.getPerX() + " (" + item.getPerSec() + "/s)");
         if (!item.count()) break;
     }
 }, 1000);
