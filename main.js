@@ -20,7 +20,7 @@ function Memory(id, maxCount) {
         if(result) this.counter = 0;
         return result;
     };
-    this.addmemory = function(item) {
+    this.add = function(item) {
         this.sum += item;
         this.memory.push(item);
         if(this.memory.length > this.maxCount)
@@ -29,21 +29,19 @@ function Memory(id, maxCount) {
 }
 
 var memory = [
+    new Memory("nsec", 1),
     new Memory("nmin", 60),
     new Memory("nhour", 60),
     new Memory("nday", 24)
 ];
 setInterval(function () {
     var value = miner.getHashesPerSecond();
-    $(".nsec").text(Math.round(value));
-
     for (var i = 0; i < memory.length; i++) {
         var mem = memory[i];
-        mem.addmemory(value);
-        if (!mem.count()) break;
+        mem.add(value);
         value = mem.sum;
         var display = Math.floor(value / mem.maxCount);
         $(mem.id).text(display);
+        if (!mem.count()) break;
     }
-
 }, 1000);

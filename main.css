@@ -5,7 +5,7 @@
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
             "title title title"
-            "nsec nsec nsec"
+            ". nsec ."
             "tmin thour tday"
             "nmin nhour nday";
     margin: auto;
