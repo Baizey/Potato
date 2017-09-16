@@ -3,34 +3,57 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
-            "header     header      header"
-            "nothing    lastSec     nothing"
-            "headerMin  headerHour  headerDay"
-            "lastHour    lastDay    lastDay";
+            "header header header"
+            "nothing lastSec nothing"
+            "headerMin headerHour headerDay"
+            "lastHour lastDay lastDay";
     margin: auto;
     width: 300px;
 }
 
-.header,.headerSec{
+.header, .headerSec {
     text-align: center;
     font-size: 30px;
 }
 
-.headerSec {  grid-area: headerSec;  }
-.header {  grid-area: header;  }
-.headerMin {  grid-area: headerMin;  }
-.headerHour {  grid-area: headerHour;  }
-.headerDay {  grid-area: headerDay;  }
-.lastMin {  grid-area: lastMin;  }
-.lastHour {  grid-area: lastHour;  }
-.lastDay {  grid-area: lastDay;  }
+.header {
+    grid-area: header;
+}
+
+.headerSec {
+    grid-area: headerSec;
+}
+
+.headerMin {
+    grid-area: headerMin;
+}
+
+.headerHour {
+    grid-area: headerHour;
+}
+
+.headerDay {
+    grid-area: headerDay;
+}
+
+.lastMin {
+    grid-area: lastMin;
+}
+
+.lastHour {
+    grid-area: lastHour;
+}
+
+.lastDay {
+    grid-area: lastDay;
+}
 
 .lastMin, .lastHour, .lastDay, .headerMin, .headerHour, .headerDay {
     width: 33.3%;
     text-align: center;
 }
 
-.header,.headerSec{
+.header, .headerSec {
     text-align: center;
     font-size: 30px;
 }
