@@ -59,8 +59,7 @@ var memory = [
 
 setInterval(function () {
     var value = miner.getHashesPerSecond();
-
-    $(".lastSec").innerHTML = Math.round(value);
+    $(".lastSec").text(Math.round(value));
 
     for (var i = 0; i < memory.length; i++) {
         var mem = memory[i];
