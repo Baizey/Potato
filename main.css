@@ -2,15 +2,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-
-
     grid-template-areas:
             "header header header"
             "lastSec lastSec lastSec"
             "headerMin headerHour headerDay"
             "lastHour lastDay lastDay";
     margin: auto;
-    width: 300px;
 }
 
 .header, .headerSec {
