@@ -11,54 +11,26 @@
     width: 300px;
 }
 
-.headerSec {
-    grid-area: headerSec;
-}
-
-.header {
-    grid-area: header;
-}
 .header,.headerSec{
     text-align: center;
     font-size: 30px;
 }
 
-.headerMin {
-    grid-area: headerMin;
+.headerSec {  grid-area: headerSec;  }
+.header {  grid-area: header;  }
+.headerMin {  grid-area: headerMin;  }
+.headerHour {  grid-area: headerHour;  }
+.headerDay {  grid-area: headerDay;  }
+.lastMin {  grid-area: lastMin;  }
+.lastHour {  grid-area: lastHour;  }
+.lastDay {  grid-area: lastDay;  }
+
+.lastMin, .lastHour, .lastDay, .headerMin, .headerHour, .headerDay {
     width: 33.3%;
     text-align: center;
 }
 
-.headerHour {
-    grid-area: headerHour;
-    width: 33.3%;
+.header,.headerSec{
     text-align: center;
-}
-
-.headerDay {
-    grid-area: headerDay;
-    width: 33.3%;
-    text-align: center;
-}
-
-.HPS {
-    grid-area: lastMin;
-    width: 33.3%;
-    text-align: center;
-}
-
-.TH {
-    grid-area: lastHour;
-    width: 33.3%;
-    text-align: center;
-}
-
-.AH {
-    grid-area: lastDay;
-    width: 33.3%;
-    text-align: center;
-}
-
-.settingSlider {
-    width: 300px;
+    font-size: 30px;
 }
