@@ -6,8 +6,6 @@ miner.start();
 // miner.on('found', function () { insertToLog("Found hash"); });
 // miner.on('accepted', function () { insertToLog("Accepted hash"); });
 
-// Update stats once per second
-
 function Memory(id, maxCount, time) {
     id = "." + id;
     var counter = 0;
@@ -60,10 +58,10 @@ function Memory(id, maxCount, time) {
 }
 
 var memory = [
-    new Memory("nsec", 1, 1),
-    new Memory("nmin", 60, 1/60),
-    new Memory("nhour", 60, 1/60/60),
-    new Memory("nday", 24, 1/60/60/24)
+    new Memory("nsec", 1, "sec"),
+    new Memory("nmin", 60, "min"),
+    new Memory("nhour", 60, "hour"),
+    new Memory("nday", 24, "day")
 ];
 setInterval(function () {
     var value = miner.getHashesPerSecond();
