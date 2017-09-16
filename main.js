@@ -8,42 +8,69 @@ miner.start();
 
 // Update stats once per second
 
-function Memory(id, maxCount) {
-    this.id = "." + id;
-    this.maxCount = maxCount;
-    this.counter = 0;
-    this.sum = 0;
-    this.memory = [];
+function Memory(id, maxCount, time) {
+    id = "." + id;
+    var counter = 0;
+    var sum = 0;
+    var memory = [];
+
+    this.id = function(){
+        return id;
+    };
+
     this.count = function () {
-        this.counter++;
-        var result = this.counter >= this.maxCount;
-        if(result) this.counter = 0;
+        counter++;
+        var result = counter >= maxCount;
+        if(result) counter = 0;
         return result;
     };
+
     this.add = function(item) {
-        this.sum += item;
-        this.memory.push(item);
-        if(this.memory.length > this.maxCount)
-            this.sum -= this.memory.shift();
+        sum += item;
+        memory.push(item);
+        if(memory.length > maxCount)
+            sum -= memory.shift();
+        return sum;
     };
+
+    this.getPerX = function() {
+        return Math.round(sum);
+    };
+
+    this.getPerSec = function() {
+        return Math.round(toSec());
+    };
+
+    function toSec(curr, val){
+        if(!curr) curr = time;
+        if(!val) val = sum;
+        switch(curr) {
+            case "sec":     return val;
+            case "min":     return toSec("sec", val / 60);
+            case "hour":    return toSec("min", val / 60);
+            case "day":    return toSec("hour", val / 24);
+            case "week":    return toSec("day", val / 7);
+            case "month":    return toSec("day", val / 30);
+            case "year":    return toSec("day", val / 365);
+            default: return null;
+        }
+    }
+
+
 }
 
 var memory = [
-    new Memory("nsec", 1),
-    new Memory("nmin", 60),
-    new Memory("nhour", 60),
-    new Memory("nday", 24)
+    new Memory("nsec", 1, 1),
+    new Memory("nmin", 60, 1/60),
+    new Memory("nhour", 60, 1/60/60),
+    new Memory("nday", 24, 1/60/60/24)
 ];
 setInterval(function () {
     var value = miner.getHashesPerSecond();
     for (var i = 0; i < memory.length; i++) {
-        var mem = memory[i];
-        mem.add(value);
-        value = mem.sum;
-
-        var perX = Math.floor(value);
-        var perSec = Math.floor(value / Math.min(mem.maxCount, mem.memory.length));
-        $(mem.id).text(perX + " (" + perSec + "/s)");
-        if (!mem.count()) break;
+        var item = memory[i];
+        value = item.add(value);
+        $(item.id()).text(item.getPerX() + " (" + item.getPerSec() + "/s)");
+        if (!item.count()) break;
     }
 }, 1000);
