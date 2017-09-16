@@ -40,8 +40,10 @@ setInterval(function () {
         var mem = memory[i];
         mem.add(value);
         value = mem.sum;
-        var display = Math.floor(value / mem.maxCount);
-        $(mem.id).text(display);
+
+        var perX = Math.floor(value);
+        var perSec = Math.floor(value / mem.maxCount);
+        $(mem.id).text(perX + "(" + perSec + "/s)");
         if (!mem.count()) break;
     }
 }, 1000);
