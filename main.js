@@ -36,7 +36,8 @@ function Memory(id, maxCount, toSec) {
     };
 
     this.getPerSec = function() {
-        return Math.round(sum * toSec);
+        var one = memory.length === maxCount ? sum : sum / memory.length * maxCount;
+        return Math.round(one * toSec);
     };
 }
 
@@ -54,7 +55,7 @@ setInterval(function () {
         var item = memory[i];
         value = item.add(value);
         if(i === 0)
-            $(item.id()).text(sum + " (" + item.getPerSec() + "/s)");
+            $(item.id()).text(Math.round(sum) + " (" + item.getPerSec() + "/s)");
         else
             $(item.id()).text(item.getPerX() + " (" + item.getPerSec() + "/s)");
         if (!item.count()) break;
