@@ -1,54 +1,30 @@
-.hashContainer {
+.hashcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
             "title title title"
-            "lastSec lastSec lastSec"
-            "headerMin headerHour headerDay"
-            "lastHour lastDay lastDay";
+            "lastsec lastsec lastsec"
+            "headermin headerhour headerday"
+            "lasthour lastday lastday";
     margin: auto;
 }
 
-.title {
-    grid-area: title;
-}
+.title {  grid-area: title;  }
 
-.headerSec {
-    grid-area: headerSec;
-}
+.headersec {  grid-area: headersec;  }
 
-.headerMin {
-    grid-area: headerMin;
-}
+.headermin {  grid-area: headermin;  }
+.lastmin {  grid-area: lastmin;  }
 
-.headerHour {
-    grid-area: headerHour;
-}
+.headerhour {  grid-area: headerhour;  }
+.lasthour {  grid-area: lasthour;  }
 
-.headerDay {
-    grid-area: headerDay;
-}
+.headerday {  grid-area: headerday;  }
+.lastday {  grid-area: lastday;  }
 
-.lastMin {
-    grid-area: lastMin;
-}
+.third {  width: 33.3%;  }
 
-.lastHour {
-    grid-area: lastHour;
-}
+.centertext{  text-align: center;  }
 
-.lastDay {
-    grid-area: lastDay;
-}
-
-.third {
-    width: 33.3%;
-}
-.centertext{
-    text-align: center;
-}
-
-.bigtext {
-    font-size:30px;
-}
+.bigtext {  font-size:30px;  }
