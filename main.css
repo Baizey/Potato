@@ -4,7 +4,7 @@
     grid-template-rows: auto;
     grid-template-areas:
             "header header header"
-            "headerSec headerSec headerSec"
+            ". headerSec ."
             "headerMin headerHour headerDay"
             "lastSec lastMin lastHour";
     margin: auto;
