@@ -3,10 +3,10 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
-            "header header header"
-            "nothing headerSec nothing"
-            "headerMin headerHour headerDay"
-            "lastSec lastMin lastHour";
+            "header     header      header"
+            "nothing    lastSec     nothing"
+            "headerMin  headerHour  headerDay"
+            "lastHour    lastDay    lastDay";
     margin: auto;
     width: 300px;
 }
@@ -42,19 +42,19 @@
 }
 
 .HPS {
-    grid-area: lastSec;
-    width: 33.3%;
-    text-align: center;
-}
-
-.TH {
     grid-area: lastMin;
     width: 33.3%;
     text-align: center;
 }
 
-.AH {
+.TH {
     grid-area: lastHour;
+    width: 33.3%;
+    text-align: center;
+}
+
+.AH {
+    grid-area: lastDay;
     width: 33.3%;
     text-align: center;
 }
