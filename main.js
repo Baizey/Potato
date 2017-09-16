@@ -11,7 +11,7 @@ miner.start();
 
 var memory = [
     {
-        id: ".lastmin",
+        id: ".nmin",
         sum: 0,
         counter: 0,
         maxCount: 60,
@@ -26,7 +26,7 @@ var memory = [
         memory: []
     },
     {
-        id: ".lasthour",
+        id: ".nhour",
         sum: 0,
         counter: 0,
         maxCount: 60,
@@ -41,7 +41,7 @@ var memory = [
         memory: []
     },
     {
-        id: ".lastday",
+        id: ".nday",
         sum: 0,
         counter: 0,
         maxCount: 24,
@@ -59,7 +59,7 @@ var memory = [
 
 setInterval(function () {
     var value = miner.getHashesPerSecond();
-    $(".lastsec").text(Math.round(value));
+    $(".nsec").text(Math.round(value));
 
     for (var i = 0; i < memory.length; i++) {
         var mem = memory[i];
