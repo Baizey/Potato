@@ -8,69 +8,40 @@ miner.start();
 
 // Update stats once per second
 
+function Memory(id, maxCount) {
+    this.id = "." + id;
+    this.maxCount = maxCount;
+    this.counter = 0;
+    this.sum = 0;
+    this.memory = [];
+    this.count = function () {
+        this.counter++;
+        var result = this.counter >= this.maxCount;
+        if(result) this.counter = 0;
+        return result;
+    };
+    this.addmemory = function(item) {
+        this.sum += item;
+        this.memory.push(item);
+        if(this.memory.length > this.maxCount)
+            this.sum -= this.memory.shift();
+    };
+}
 
 var memory = [
-    {
-        id: ".nmin",
-        sum: 0,
-        counter: 0,
-        maxCount: 60,
-        count: function () {
-            this.counter++;
-            if (this.counter >= this.maxCount) {
-                this.counter = 0;
-                return true;
-            }
-            return false;
-        },
-        memory: []
-    },
-    {
-        id: ".nhour",
-        sum: 0,
-        counter: 0,
-        maxCount: 60,
-        count: function () {
-            this.counter++;
-            if (this.counter >= this.maxCount) {
-                this.counter = 0;
-                return true;
-            }
-            return false;
-        },
-        memory: []
-    },
-    {
-        id: ".nday",
-        sum: 0,
-        counter: 0,
-        maxCount: 24,
-        count: function () {
-            this.counter++;
-            if (this.counter >= this.maxCount) {
-                this.counter = 0;
-                return true;
-            }
-            return false;
-        },
-        memory: []
-    }
+    new Memory("nmin", 60),
+    new Memory("nhour", 60),
+    new Memory("nday", 24)
 ];
-
 setInterval(function () {
     var value = miner.getHashesPerSecond();
     $(".nsec").text(Math.round(value));
 
     for (var i = 0; i < memory.length; i++) {
         var mem = memory[i];
-        mem.sum += value;
-        mem.memory.push(value);
-        if (mem.memory.length > mem.maxCount)
-            mem.sum -= mem.memory.shift();
-        if (!mem.count())
-            break;
+        mem.addmemory(value);
+        if (!mem.count()) break;
         value = mem.sum;
-
         var display = Math.floor(value / mem.maxCount);
         $(mem.id).text(display);
     }
