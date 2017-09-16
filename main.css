@@ -3,20 +3,15 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-            "header header header"
+            "title title title"
             "lastSec lastSec lastSec"
             "headerMin headerHour headerDay"
             "lastHour lastDay lastDay";
     margin: auto;
 }
 
-.header, .headerSec {
-    text-align: center;
-    font-size: 30px;
-}
-
-.header {
-    grid-area: header;
+.title {
+    grid-area: title;
 }
 
 .headerSec {
@@ -47,12 +42,13 @@
     grid-area: lastDay;
 }
 
-.lastMin, .lastHour, .lastDay, .headerMin, .headerHour, .headerDay {
+.third {
     width: 33.3%;
+}
+.centertext{
     text-align: center;
 }
 
-.header, .headerSec {
-    text-align: center;
-    font-size: 30px;
+.bigtext {
+    font-size:30px;
 }
