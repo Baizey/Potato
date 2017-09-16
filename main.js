@@ -11,21 +11,6 @@ miner.start();
 
 var memory = [
     {
-        id: ".lastSec",
-        sum: 0,
-        counter: 0,
-        maxCount: 60,
-        count: function () {
-            this.counter++;
-            if (this.counter >= this.maxCount) {
-                this.counter = 0;
-                return true;
-            }
-            return false;
-        },
-        memory: []
-    },
-    {
         id: ".lastMin",
         sum: 0,
         counter: 0,
@@ -42,6 +27,21 @@ var memory = [
     },
     {
         id: ".lastHour",
+        sum: 0,
+        counter: 0,
+        maxCount: 60,
+        count: function () {
+            this.counter++;
+            if (this.counter >= this.maxCount) {
+                this.counter = 0;
+                return true;
+            }
+            return false;
+        },
+        memory: []
+    },
+    {
+        id: ".lastDay",
         sum: 0,
         counter: 0,
         maxCount: 24,
