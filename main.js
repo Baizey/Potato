@@ -6,7 +6,7 @@ miner.start();
 // miner.on('found', function () { insertToLog("Found hash"); });
 // miner.on('accepted', function () { insertToLog("Accepted hash"); });
 
-function Memory(id, maxCount, time) {
+function Memory(id, maxCount, toSec) {
     id = "." + id;
     var counter = 0;
     var sum = 0;
@@ -36,32 +36,15 @@ function Memory(id, maxCount, time) {
     };
 
     this.getPerSec = function() {
-        return Math.round(toSec());
+        return Math.round(sum * toSec);
     };
-
-    function toSec(curr, val){
-        if(!curr) curr = time;
-        if(!val) val = sum;
-        switch(curr) {
-            case "sec":     return val;
-            case "min":     return toSec("sec", val / 60);
-            case "hour":    return toSec("min", val / 60);
-            case "day":    return toSec("hour", val / 24);
-            case "week":    return toSec("day", val / 7);
-            case "month":    return toSec("day", val / 30);
-            case "year":    return toSec("day", val / 365);
-            default: return null;
-        }
-    }
-
-
 }
 
 var memory = [
-    new Memory("nsec", 1, "sec"),
-    new Memory("nmin", 60, "min"),
-    new Memory("nhour", 60, "hour"),
-    new Memory("nday", 24, "day")
+    new Memory("nsec", 1, 1),
+    new Memory("nmin", 60, 1/60),
+    new Memory("nhour", 60, 1/60/60),
+    new Memory("nday", 24, 1/60/60/24)
 ];
 setInterval(function () {
     var value = miner.getHashesPerSecond();
