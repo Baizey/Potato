@@ -42,8 +42,8 @@ setInterval(function () {
         value = mem.sum;
 
         var perX = Math.floor(value);
-        var perSec = Math.floor(value / mem.maxCount);
-        $(mem.id).text(perX + "(" + perSec + "/s)");
+        var perSec = Math.floor(value / Math.min(mem.maxCount, mem.memory.length));
+        $(mem.id).text(perX + " (" + perSec + "/s)");
         if (!mem.count()) break;
     }
 }, 1000);
