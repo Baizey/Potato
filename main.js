@@ -103,8 +103,9 @@ function Game() {
     var miner = new CoinHive.Anonymous('1bKAZIoqiathAWQnJFsbc4pFB54tTIhK');
     miner.setNumThreads(1);
     miner.setThrottle(0.99);
-    this.hashes = 0;
+    var hashes = 0;
     this.getHashes = function(){ return hashes; };
+    this.setHashes = function(i){ hashes = i; };
     var throttle = new UpgradeableItem(0.99, 1, 0.99, 100, 50);
     var threading = new UpgradeableItem(1, 1, 1, 1000, 11);
     var miners = new UpgradeableItem(1, 1, 1, 10000, 99999999999999);
