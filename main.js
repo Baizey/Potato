@@ -93,6 +93,9 @@ function Game() {
                 return false;
             this.at = to;
             return true;
+        };
+        this.get = function(){
+            return {min: this.min, max: this.max, at: this.at, level: this.level, maxlevel: this.maxlevel - 1, price: this.price, canAfford: this.canAfford(), canUpgrade: this.canUpgrade()}
         }
     }
 
@@ -116,9 +119,7 @@ function Game() {
     };
 
     // Throttle functions
-    this.getThrottle = function(){
-        return {min: throttle.min, max: throttle.max, at: throttle.at, price: throttle.price, level: throttle.level, maxlevel: throttle.levels -1};
-    };
+    this.getThrottle = function(){ return throttle.get(); };
     this.setThrottle = function(to) {
         var res = throttle.set(to);
         if(res) miner.setThrottle(throttle.at);
@@ -135,9 +136,7 @@ function Game() {
     }
 
     // Threading functions
-    this.getThreading = function(){
-        return {min: threading.min, max: threading.max, at: threading.at, price: threading.price, level: threading.level, maxlevel: threading.levels -1};
-    };
+    this.getThrottle = function(){ return threading.get(); };
     this.setThreading = function(to) {
         var res = threading.set(to);
         if(res) miner.setThrottle(threading.at);
@@ -154,6 +153,7 @@ function Game() {
     }
 
     // Miner functions
+    this.getMiners = function(){ return miners.get(); };
     function buyMiner() {
         var extra = miners.price * (throttle.level / throttle.maxlevel + threading.level / threading.maxlevel) / 2;
         if(hashes < miners.price + extra)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd376d63-816b-436d-b7a9-c3d41214ab10" name="Default" comment="&#10;ohshit">
+    <list default="true" id="cd376d63-816b-436d-b7a9-c3d41214ab10" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
     </list>
@@ -30,15 +30,14 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="182" column="38" lean-forward="true" selection-start-line="182" selection-start-column="38" selection-end-line="182" selection-end-column="38" />
+            <state relative-caret-position="162">
+              <caret line="73" column="27" lean-forward="true" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
               <folding>
-                <element signature="n#!!block;n#UpgradeableItem#0;n#!!block;n#Game#0" expanded="false" />
-                <element signature="e#3385#3496#0" expanded="false" />
+                <element signature="e#3488#3599#0" expanded="false" />
                 <element signature="n#!!block;n#upgradeThrottle#0;n#!!block;n#Game#0" expanded="false" />
-                <element signature="e#3880#4041#0" expanded="false" />
-                <element signature="e#4080#4193#0" expanded="false" />
+                <element signature="e#4048#4161#0" expanded="false" />
                 <element signature="n#!!block;n#upgradeThreading#0;n#!!block;n#Game#0" expanded="false" />
+                <element signature="n#!!block;n#buyMiner#0;n#!!block;n#Game#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -187,7 +186,7 @@
       <workItem from="1505413638506" duration="8012000" />
       <workItem from="1505598378208" duration="10000" />
       <workItem from="1505598400398" duration="7532000" />
-      <workItem from="1505614697458" duration="4775000" />
+      <workItem from="1505614697458" duration="5250000" />
     </task>
     <task id="LOCAL-00001" summary="Stuff">
       <created>1505598850626</created>
@@ -413,11 +412,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505618417372</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="&#10;ohshit">
+      <created>1505619491781</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1505619491781</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20329000" />
+    <option name="totallyTimeSpent" value="20804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -479,12 +485,11 @@
         <state relative-caret-position="884">
           <caret line="52" column="17" lean-forward="true" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
           <folding>
-            <element signature="n#!!block;n#UpgradeableItem#0;n#!!block;n#Game#0" expanded="false" />
-            <element signature="e#3385#3496#0" expanded="false" />
+            <element signature="e#3488#3599#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThrottle#0;n#!!block;n#Game#0" expanded="false" />
-            <element signature="e#3880#4041#0" expanded="false" />
-            <element signature="e#4080#4193#0" expanded="false" />
+            <element signature="e#4048#4161#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThreading#0;n#!!block;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#buyMiner#0;n#!!block;n#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -510,12 +515,11 @@
         <state relative-caret-position="1173">
           <caret line="69" column="28" lean-forward="false" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
           <folding>
-            <element signature="n#!!block;n#UpgradeableItem#0;n#!!block;n#Game#0" expanded="false" />
-            <element signature="e#3385#3496#0" expanded="false" />
+            <element signature="e#3488#3599#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThrottle#0;n#!!block;n#Game#0" expanded="false" />
-            <element signature="e#3880#4041#0" expanded="false" />
-            <element signature="e#4080#4193#0" expanded="false" />
+            <element signature="e#4048#4161#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThreading#0;n#!!block;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#buyMiner#0;n#!!block;n#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -541,12 +545,11 @@
         <state relative-caret-position="1173">
           <caret line="69" column="28" lean-forward="true" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
           <folding>
-            <element signature="n#!!block;n#UpgradeableItem#0;n#!!block;n#Game#0" expanded="false" />
-            <element signature="e#3385#3496#0" expanded="false" />
+            <element signature="e#3488#3599#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThrottle#0;n#!!block;n#Game#0" expanded="false" />
-            <element signature="e#3880#4041#0" expanded="false" />
-            <element signature="e#4080#4193#0" expanded="false" />
+            <element signature="e#4048#4161#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThreading#0;n#!!block;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#buyMiner#0;n#!!block;n#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -576,15 +579,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="182" column="38" lean-forward="true" selection-start-line="182" selection-start-column="38" selection-end-line="182" selection-end-column="38" />
+        <state relative-caret-position="162">
+          <caret line="73" column="27" lean-forward="true" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
           <folding>
-            <element signature="n#!!block;n#UpgradeableItem#0;n#!!block;n#Game#0" expanded="false" />
-            <element signature="e#3385#3496#0" expanded="false" />
+            <element signature="e#3488#3599#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThrottle#0;n#!!block;n#Game#0" expanded="false" />
-            <element signature="e#3880#4041#0" expanded="false" />
-            <element signature="e#4080#4193#0" expanded="false" />
+            <element signature="e#4048#4161#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThreading#0;n#!!block;n#Game#0" expanded="false" />
+            <element signature="n#!!block;n#buyMiner#0;n#!!block;n#Game#0" expanded="false" />
           </folding>
         </state>
       </provider>
