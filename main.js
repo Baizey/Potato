@@ -108,7 +108,7 @@ function Game() {
     this.setHashes = function(i){ hashes = i; };
     var throttle = new UpgradeableItem(0.99, 1, 0.99, 100, 50);
     var threading = new UpgradeableItem(1, 1, 1, 1000, 11);
-    var miners = new UpgradeableItem(1, 1, 1, 10000, 99999999999999);
+    var miners = new UpgradeableItem(1, 1, 1, 10000, 1/0);
 
     // Basic functions
     function addHashes(num){ hashes += Math.round(num * miners.max); }
@@ -156,14 +156,7 @@ function Game() {
     // Miner functions
     this.getMiners = function(){ return miners.get(); };
     function buyMiner() {
-        var extra = miners.price * (throttle.level / throttle.maxlevel + threading.level / threading.maxlevel) / 2;
-        if(hashes < miners.price + extra)
-            return false;
-        if(miners.upgrade()){
-            hashes -= extra;
-            return true;
-        }
-        return false;
+        return miners.upgrade();
     }
 
     this.buy = function(what){
