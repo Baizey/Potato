@@ -136,7 +136,7 @@ function Game() {
     }
 
     // Threading functions
-    this.getThrottle = function(){ return threading.get(); };
+    this.getThreading = function(){ return threading.get(); };
     this.setThreading = function(to) {
         var res = threading.set(to);
         if(res) miner.setThrottle(threading.at);
@@ -184,3 +184,9 @@ function Game() {
 }
 
 var game = new Game();
+setInterval(function(){
+    $(".nsec").text(game.hashes());
+    $(".nmin").text(game.getMiners().at);
+    $(".nhour").text(game.getThrottle().at);
+    $(".nday").text(game.getThreading().at);
+}, 1000);
