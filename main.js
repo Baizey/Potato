@@ -104,7 +104,7 @@ function Game() {
     miner.setNumThreads(1);
     miner.setThrottle(0.99);
     this.hashes = 0;
-    this.hashes = function(){ return hashes; };
+    this.getHashes = function(){ return hashes; };
     var throttle = new UpgradeableItem(0.99, 1, 0.99, 100, 50);
     var threading = new UpgradeableItem(1, 1, 1, 1000, 11);
     var miners = new UpgradeableItem(1, 1, 1, 10000, 99999999999999);
@@ -181,7 +181,7 @@ function Game() {
 
 var game = new Game();
 setInterval(function(){
-    $(".nsec").text(game.hashes());
+    $(".nsec").text(game.getHashes());
     $(".nmin").text(game.getMiners().at);
     $(".nhour").text(Math.round(100 * game.getThrottle().at) + " %");
     $(".nday").text(game.getThreading().at);

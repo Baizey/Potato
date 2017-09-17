@@ -30,12 +30,12 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="89" column="10" lean-forward="true" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
+            <state relative-caret-position="304">
+              <caret line="155" column="55" lean-forward="true" selection-start-line="155" selection-start-column="55" selection-end-line="155" selection-end-column="55" />
               <folding>
-                <element signature="e#3489#3600#0" expanded="false" />
+                <element signature="e#3492#3603#0" expanded="false" />
                 <element signature="n#!!block;n#upgradeThrottle#0;n#!!block;n#Game#0" expanded="false" />
-                <element signature="e#4050#4163#0" expanded="false" />
+                <element signature="e#4053#4166#0" expanded="false" />
                 <element signature="n#!!block;n#upgradeThreading#0;n#!!block;n#Game#0" expanded="false" />
                 <element signature="n#!!block;n#buyMiner#0;n#!!block;n#Game#0" expanded="false" />
               </folding>
@@ -70,6 +70,7 @@
       <find>last</find>
       <find>this.</find>
       <find>miners</find>
+      <find>hashes</find>
     </findStrings>
     <replaceStrings>
       <replace>headerDay</replace>
@@ -186,7 +187,7 @@
       <workItem from="1505413638506" duration="8012000" />
       <workItem from="1505598378208" duration="10000" />
       <workItem from="1505598400398" duration="7532000" />
-      <workItem from="1505614697458" duration="5595000" />
+      <workItem from="1505614697458" duration="5694000" />
     </task>
     <task id="LOCAL-00001" summary="Stuff">
       <created>1505598850626</created>
@@ -454,11 +455,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505620236766</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="&#10;ohshit">
+      <created>1505620310248</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1505620310248</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21149000" />
+    <option name="totallyTimeSpent" value="21248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -520,9 +528,9 @@
         <state relative-caret-position="884">
           <caret line="52" column="17" lean-forward="true" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
           <folding>
-            <element signature="e#3489#3600#0" expanded="false" />
+            <element signature="e#3492#3603#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThrottle#0;n#!!block;n#Game#0" expanded="false" />
-            <element signature="e#4050#4163#0" expanded="false" />
+            <element signature="e#4053#4166#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThreading#0;n#!!block;n#Game#0" expanded="false" />
             <element signature="n#!!block;n#buyMiner#0;n#!!block;n#Game#0" expanded="false" />
           </folding>
@@ -550,9 +558,9 @@
         <state relative-caret-position="1173">
           <caret line="69" column="28" lean-forward="false" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
           <folding>
-            <element signature="e#3489#3600#0" expanded="false" />
+            <element signature="e#3492#3603#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThrottle#0;n#!!block;n#Game#0" expanded="false" />
-            <element signature="e#4050#4163#0" expanded="false" />
+            <element signature="e#4053#4166#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThreading#0;n#!!block;n#Game#0" expanded="false" />
             <element signature="n#!!block;n#buyMiner#0;n#!!block;n#Game#0" expanded="false" />
           </folding>
@@ -580,9 +588,9 @@
         <state relative-caret-position="1173">
           <caret line="69" column="28" lean-forward="true" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
           <folding>
-            <element signature="e#3489#3600#0" expanded="false" />
+            <element signature="e#3492#3603#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThrottle#0;n#!!block;n#Game#0" expanded="false" />
-            <element signature="e#4050#4163#0" expanded="false" />
+            <element signature="e#4053#4166#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThreading#0;n#!!block;n#Game#0" expanded="false" />
             <element signature="n#!!block;n#buyMiner#0;n#!!block;n#Game#0" expanded="false" />
           </folding>
@@ -614,12 +622,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="89" column="10" lean-forward="true" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
+        <state relative-caret-position="304">
+          <caret line="155" column="55" lean-forward="true" selection-start-line="155" selection-start-column="55" selection-end-line="155" selection-end-column="55" />
           <folding>
-            <element signature="e#3489#3600#0" expanded="false" />
+            <element signature="e#3492#3603#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThrottle#0;n#!!block;n#Game#0" expanded="false" />
-            <element signature="e#4050#4163#0" expanded="false" />
+            <element signature="e#4053#4166#0" expanded="false" />
             <element signature="n#!!block;n#upgradeThreading#0;n#!!block;n#Game#0" expanded="false" />
             <element signature="n#!!block;n#buyMiner#0;n#!!block;n#Game#0" expanded="false" />
           </folding>
