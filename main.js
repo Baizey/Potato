@@ -187,6 +187,6 @@ var game = new Game();
 setInterval(function(){
     $(".nsec").text(game.hashes());
     $(".nmin").text(game.getMiners().at);
-    $(".nhour").text(game.getThrottle().at);
+    $(".nhour").text(100 * game.getThrottle().at);
     $(".nday").text(game.getThreading().at);
 }, 1000);
