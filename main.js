@@ -95,7 +95,7 @@ function Game() {
             return true;
         };
         this.get = function(){
-            return {min: this.min, max: this.max, at: this.at, level: this.level, maxlevel: this.maxlevel - 1, price: this.price, canAfford: this.canAfford(), canUpgrade: this.canUpgrade()}
+            return {min: this.min, max: this.max, at: this.at, level: this.level, maxlevel: this.levels - 1, price: this.price, canAfford: this.canAfford(), canUpgrade: this.canUpgrade()}
         }
     }
 
@@ -132,8 +132,8 @@ function Game() {
             throttle.set(throttle.min);
             miner.setThrottle(throttle.min);
             return true;
-        } else
-            return false;
+        }
+        return false;
     }
 
     // Threading functions
@@ -149,14 +149,19 @@ function Game() {
             threading.set(threading.max);
             miner.setNumThreads(threading.max);
             return true;
-        } else
-            return false;
+        }
+        return false;
     }
 
     // Miner functions
     this.getMiners = function(){ return miners.get(); };
     function buyMiner() {
-        return miners.upgrade();
+         if(miners.upgrade()){
+             miners.at++;
+             miners.max++;
+             return true;
+         }
+         return false;
     }
 
     this.buy = function(what){
